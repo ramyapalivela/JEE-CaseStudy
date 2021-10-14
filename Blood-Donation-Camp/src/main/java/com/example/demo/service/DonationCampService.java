@@ -23,7 +23,7 @@ public class DonationCampService {
 		return this.repo.findAll();
 	}
 	public List<DonationCampDetails> findByLocation(String location){
-		return this.repo.findByLocation(location);
+		return this.repo.findByDonationCampLocation(location);
 	}
 	public int removeCampDetails(int number) {
 		int rowRemoved=0;
