@@ -24,29 +24,29 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 @Entity
-@Table(name="donationCamp")
+@Table(name="donationcamp")
 public class DonationCampDetails {
 	@Id
-	@Column(name="campNumber")
+	@Column(name="campnumber")
 	int campNumber;
 	
-	@Column(name="campName")
+	@Column(name="campname")
 	@NotNull(message="Please enter the campName")
 	String donationCampName;
 	
-	@Column(name="campLocation")
+	@Column(name="camplocation")
 	@NotNull(message="Please enter the location")
 	String donationCampLocation;
 	
-	@Column(name="campDate")
+	@Column(name="campdate")
 	@DateTimeFormat(iso=ISO.DATE)
 	LocalDate donationCampDate;
 	
-	@Column(name="campPhoneNumber")
+	@Column(name="campphonenumber")
 	@Size(max=10,message="Please enter the phoneNumber")
 	long donationCampPhoneNumber;
 	
-	@Column(name="campPincode")
+	@Column(name="camppincode")
 	@Size(max=6,message="Please enter the pincode")
 	int donationCampPincode;
 }
