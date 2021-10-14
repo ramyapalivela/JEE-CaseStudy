@@ -33,7 +33,6 @@ public class DonationCampService {
 		}
 		return rowRemoved;
 	}
-	
 	public int updateCamp( int campNumber, String donationCampName,String donationCampLocation,
 			 LocalDate donationCampDate, long donationCampPhoneNumber, int donationCampPincode) {
 		return this.repo.updateCamp(campNumber, donationCampName, donationCampLocation, donationCampDate, donationCampPhoneNumber, donationCampPincode);
