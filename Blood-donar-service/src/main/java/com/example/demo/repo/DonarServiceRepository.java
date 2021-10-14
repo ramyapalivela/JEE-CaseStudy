@@ -16,13 +16,13 @@ import com.example.demo.entity.DonarsDetails;
 @Repository
 public interface DonarServiceRepository extends JpaRepository<DonarsDetails, Integer>  {
 	public List<DonarsDetails> findAll();
-	public List<DonarsDetails> findByBloodGroup(String group);
-	public List<DonarsDetails> findByLocation(String location);
+	public List<DonarsDetails> findByDonarBloodGroup(String group);
+	public List<DonarsDetails> findByDonarLocation(String location);
 	public List<DonarsDetails> findByDonarId(int id);
 	public int deleteDonarById(int id);
-	@Query(nativeQuery = true, value = "update donarList set donarName =: name,donarAge=: age,donarDateofBirth:=dob,"
+	@Query(nativeQuery = true, value = "update donarList set donarName=:name,donarAge=:age,donarDateofBirth:=dob,"
 			+ "donarLocation=:location,donarPincode=:pincode,donarBloodGroup=:group,donarPhoneNumber:=phonenumber,"
-			+ "donarDonationDate=:donationdate  where donarId=: id")
+			+ "donarDonationDate=:donationdate  where donarId=:id")
 	@Modifying
 	@Transactional
 	public int updateDonar(@Param("id") int donarId,@Param("name") String nameToUpdate,@Param("age") int ageToUpdate,
