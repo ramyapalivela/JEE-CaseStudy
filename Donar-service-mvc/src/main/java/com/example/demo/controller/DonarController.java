@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.demo.entity.DonarsDetails;
@@ -28,7 +29,7 @@ public class DonarController {
 	@Autowired
 	private RestTemplate template;
 	
-	@RequestMapping(value="/")
+	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String init(Model model) {
 		model.addAttribute("heading", "Donar Details");
 		return "index";

@@ -11,6 +11,7 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.stereotype.Component;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ import lombok.experimental.FieldDefaults;
 
 @Entity
 @Table(name="donationCamp")
+@Component
 public class DonationCampDetails {
 	@Id
 	@Column(name="campNumber")

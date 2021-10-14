@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.demo.entity.DonationCampDetails;
@@ -27,7 +28,7 @@ public class CampController {
 	@Autowired
 	private RestTemplate template;
 	
-	@RequestMapping(value="/")
+	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String init(Model model) {
 		model.addAttribute("heading", "Blood Donation Camp Details");
 		return "index";

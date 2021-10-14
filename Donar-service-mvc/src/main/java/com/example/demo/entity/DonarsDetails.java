@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.stereotype.Component;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ import lombok.experimental.FieldDefaults;
 
 @Entity
 @Table(name="donar_list")
+@Component
 public class DonarsDetails {
 	
 	@Id
