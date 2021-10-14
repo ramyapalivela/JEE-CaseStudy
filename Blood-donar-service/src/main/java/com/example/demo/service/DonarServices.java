@@ -21,10 +21,10 @@ public class DonarServices {
 		return this.repo.findAll();
 	}
 	public List<DonarsDetails> findByBloodGroup(String group){
-		return this.repo.findByBloodGroup(group);
+		return this.repo.findByDonarBloodGroup(group);
 	}
 	public List<DonarsDetails> findByLocation(String location){
-		return this.repo.findByLocation(location);
+		return this.repo.findByDonarLocation(location);
 		
 	}
 	public List<DonarsDetails> findByDonarId(int id){
