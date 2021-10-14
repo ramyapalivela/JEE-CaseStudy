@@ -25,15 +25,13 @@ public class DonationCampController {
 	private DonationCampService service;
 	
 	@Autowired
-	
+	public void setService(DonationCampService service) {
+		this.service = service;
+	}
 	
 	@GetMapping
 	public List<DonationCampDetails> findAll(){
 		return this.service.findAll();
-	}
-	
-	public void setService(DonationCampService service) {
-		this.service = service;
 	}
 
 	@GetMapping(path="/location/{location}")
