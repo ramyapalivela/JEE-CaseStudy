@@ -26,7 +26,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 @Entity
-@Table(name="donar_list")
+@Table(name="donarlist")
 @Component
 public class DonarsDetails {
 	
