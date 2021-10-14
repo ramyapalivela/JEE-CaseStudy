@@ -25,16 +25,17 @@ public class DonationCampController {
 	private DonationCampService service;
 	
 	@Autowired
-	public DonationCampController(DonationCampService service) {
-		super();
-		this.service = service;
-	}
+	
 	
 	@GetMapping
 	public List<DonationCampDetails> findAll(){
 		return this.service.findAll();
 	}
 	
+	public void setService(DonationCampService service) {
+		this.service = service;
+	}
+
 	@GetMapping(path="/location/{location}")
 	public List<DonationCampDetails> findByLocation(@PathVariable("location")String location)
 	{
@@ -42,10 +43,10 @@ public class DonationCampController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<DonationCampDetails> add(@RequestBody DonationCampDetails camp)
+	public ResponseEntity<DonationCampDetails> add(@RequestBody DonationCampDetails entity)
 	{
-		DonationCampDetails addedCamp=this.service.addCampDetails(camp);
-		return ResponseEntity.status(HttpStatus.CREATED).body(addedCamp);
+		DonationCampDetails addedEntity=this.service.addCampDetails(entity);
+		return ResponseEntity.status(HttpStatus.CREATED).body(addedEntity);
 	}
 	
 	@PutMapping

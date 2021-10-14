@@ -17,7 +17,6 @@ import com.example.demo.entity.DonationCampDetails;
 public interface DonationCampRepository extends JpaRepository<DonationCampDetails, Integer> {
 	public List<DonationCampDetails> findAll();
 	public List<DonationCampDetails> findByLocation(String location);
-	public DonationCampDetails addCampDetails(DonationCampDetails camp);
 	public int removeCampDetails(int number);
 	@Query(nativeQuery = true, value = "update donationCamp set donationCampName=:name,donationCampLocation =: location,donationCampDate=:date,"
 			+ "donationCampPhoneNumber =: phonenumber,donationCampPincode=:pin where campNumber=:number")

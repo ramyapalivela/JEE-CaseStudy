@@ -17,7 +17,7 @@ public class DonationCampService {
 	private DonationCampRepository repo;
 	
 	public DonationCampDetails addCampDetails(DonationCampDetails camp){
-		return this.repo.addCampDetails(camp);
+		return this.repo.save(camp);
 	}
 	public List<DonationCampDetails> findAll(){
 		return this.repo.findAll();
